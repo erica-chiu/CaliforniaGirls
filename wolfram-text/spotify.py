@@ -5,5 +5,7 @@ def get_track_url(song_title):
     params = {'q': song_title, 'type': 'track'}
 
     spotify_response = requests.get(spotify_url, params=params).json()
+    print('spotify response:')
+    print(spotify_response)
     track_url = spotify_response['tracks']['items'][0]['preview_url']
     return track_url
