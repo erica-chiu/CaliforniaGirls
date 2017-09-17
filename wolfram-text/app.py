@@ -1,12 +1,13 @@
 import wolfram
+import my_keys #delete this in your own code
 
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse, Message
 from twilio.rest import Client
 import urllib
 
-# Account SID and Auth Token from www.twilio.com/console
-client = Client('ACb324166cd2206250cb89a3b6b5631739', '5721a5e0622b1ef9ac514a1819fe2436')
+#replace my_keys.get_key(foo) with your twilio sid and auth
+client = Client(my_keys.get_key('twilio sid'), my_keys.get_key('twilio auth'))
 app = Flask(__name__)
 
 @app.route('/')
