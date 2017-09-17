@@ -1,9 +1,11 @@
 body {
   background-color: #FFB6C1;
+  text-align: center;
 }
 
 div {
-  margin: auto auto;
+  width: 400px;
+  margin: 0 auto;
 }
 
 h1, p {
