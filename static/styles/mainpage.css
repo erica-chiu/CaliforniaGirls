@@ -1,0 +1,13 @@
+body {
+  background-color: #FFB6C1;
+}
+
+h1, p {
+  color: white;
+  text-align: center;
+  font-family: monospace;
+}
+
+h1 {
+  padding-top: 50%;
+}

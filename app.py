@@ -13,7 +13,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     #return 'Hello, world!'
-    return render_template("main.html")
+    return render_template("mainpage.html")
 
 # A route to respond to SMS messages and kick off a phone call.
 @app.route('/sms', methods=['POST', 'GET'])
