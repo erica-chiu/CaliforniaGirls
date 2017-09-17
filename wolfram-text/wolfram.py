@@ -16,6 +16,10 @@ def get_answer(question):
         response = requests.get(request)
         print('status code: {}'.format(response.status_code))
         r = json.loads(response.text)
-        return format_answer(r['queryresult']['pods'][1]['subpods'][0]['plaintext'])
+
+        if 'Input' not in r['queryresult']['pods'][0]['title']:
+            return format_answer(r['queryresult']['pods'][0]['subpods'][0]['plaintext'])
+        else:
+            return format_answer(r['queryresult']['pods'][1]['subpods'][0]['plaintext'])
     except:
         return 'There was an error in getting the answer - but 42 is a good guess.'
