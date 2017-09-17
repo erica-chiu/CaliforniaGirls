@@ -25,7 +25,10 @@ def sms():
     from_number = request.form['From']
     to_number = request.form['To']
     print('from: {} to: {}'.format(from_number, to_number))
-    answer = wolfram.get_answer(question)
+    if 'rega' in question.lower():
+        answer = 'I am Rega.'
+    else:
+        answer = wolfram.get_answer(question)
     print('answer: {}'.format(answer))
     response = MessagingResponse()
     response.message(answer)
