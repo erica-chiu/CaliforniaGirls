@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    print('Index')
+    print('Website')
     return 'Hello, world!'
 
 # A route to respond to SMS messages and kick off a phone call.
