@@ -1,7 +1,7 @@
 import wolfram
 import my_keys #delete this in your own code
 
-from flask import Flask, request
+from flask import Flask, request, render_template
 from twilio.twiml.messaging_response import MessagingResponse, Message
 from twilio.rest import Client
 import urllib
@@ -12,6 +12,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    #return 'Hello, world!'
     return render_template("main.html")
 
 # A route to respond to SMS messages and kick off a phone call.
