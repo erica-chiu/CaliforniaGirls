@@ -1,5 +1,5 @@
 import wolfram
-import my.keys
+import my_keys
 
 from flask import Flask, request, render_template
 from twilio.twiml.messaging_response import MessagingResponse, Message
